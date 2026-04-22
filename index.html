@@ -1,245 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google" content="notranslate" />
-  <title>Private Adult Access</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA Glow & Style | Honest Beauty & Fashion Reviews</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 全局基础设置：干净、明亮的杂志风格 */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d4a373;
+            --bg-color: #fcfbf9;
+            --text-color: #4a4a4a;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100%;
-    }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background:
-        radial-gradient(circle at top, rgba(255, 94, 146, 0.16), transparent 30%),
-        linear-gradient(180deg, #0a1020 0%, #070b14 100%);
-      font-family: Arial, Helvetica, sans-serif;
-      color: #ffffff;
-      padding: 20px;
-    }
+        a {
+            text-decoration: none;
+            color: var(--accent-color);
+        }
 
-    .wrap {
-      width: 100%;
-      max-width: 560px;
-    }
+        /* 顶部导航栏 */
+        header {
+            background-color: #fff;
+            padding: 20px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    .card {
-      width: 100%;
-      background: rgba(18, 24, 40, 0.96);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 22px;
-      padding: 26px 22px 22px;
-      text-align: center;
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
-      backdrop-filter: blur(8px);
-    }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
 
-    .badge {
-      display: inline-block;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(255, 83, 136, 0.12);
-      border: 1px solid rgba(255, 120, 165, 0.18);
-      color: #ffb6cf;
-      font-size: 12px;
-      margin-bottom: 14px;
-      line-height: 1;
-      letter-spacing: 0.3px;
-    }
+        .nav-links a {
+            margin-left: 20px;
+            color: var(--primary-color);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
 
-    h1 {
-      margin: 0 0 10px;
-      font-size: 32px;
-      line-height: 1.18;
-      font-weight: 700;
-    }
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
 
-    .sub {
-      margin: 0 auto 18px;
-      max-width: 430px;
-      color: #d5dbea;
-      font-size: 15px;
-      line-height: 1.6;
-    }
+        /* 主视觉区 (Hero Section) */
+        .hero {
+            position: relative;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1596462502278-27bf85033e5a?auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
 
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      margin: 16px 0 18px;
-      border-radius: 16px;
-      overflow: hidden;
-      background:
-        linear-gradient(to top, rgba(0,0,0,0.38), rgba(0,0,0,0.14)),
-        url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80")
-        center/cover no-repeat;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
 
-    .hero-label {
-      position: absolute;
-      left: 14px;
-      bottom: 14px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(10, 14, 26, 0.72);
-      color: #ffffff;
-      font-size: 12px;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
+        .hero-content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin: 0 0 18px;
-    }
+        /* 测评内容网格 */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
 
-    .feature {
-      padding: 12px 10px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.06);
-      font-size: 13px;
-      color: #d9dfeb;
-      line-height: 1.45;
-    }
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+        }
 
-    .feature strong {
-      display: block;
-      color: #ffffff;
-      font-size: 14px;
-      margin-bottom: 3px;
-    }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
 
-    .btn {
-      display: block;
-      width: 100%;
-      margin-top: 8px;
-      padding: 18px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #ff2f6d, #ff8e4a);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 1;
-      text-align: center;
-      box-shadow: 0 10px 28px rgba(255, 79, 126, 0.28);
-      transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
-    }
+        /* 测评卡片设计 */
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease;
+        }
 
-    .btn:hover {
-      transform: translateY(-1px);
-      opacity: 0.98;
-      box-shadow: 0 14px 34px rgba(255, 79, 126, 0.34);
-    }
+        .card:hover {
+            transform: translateY(-5px);
+        }
 
-    .hint {
-      margin-top: 13px;
-      font-size: 13px;
-      color: #b8c0cf;
-      line-height: 1.5;
-    }
+        .card-img {
+            height: 250px;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center;
+        }
 
-    .note {
-      margin-top: 16px;
-      font-size: 11px;
-      color: #8f97a8;
-      line-height: 1.6;
-    }
+        .card-content {
+            padding: 25px;
+        }
 
-    @media (max-width: 640px) {
-      .card {
-        padding: 22px 16px 18px;
-        border-radius: 18px;
-      }
+        .category {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
 
-      h1 {
-        font-size: 28px;
-      }
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
 
-      .sub {
-        font-size: 14px;
-      }
+        .card-desc {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
 
-      .hero {
-        height: 240px;
-      }
+        .read-more {
+            display: inline-block;
+            padding: 8px 0;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-bottom: 2px solid var(--accent-color);
+            color: var(--primary-color);
+        }
 
-      .features {
-        grid-template-columns: 1fr;
-      }
+        /* 底部合规声明 (过审核心要素) */
+        footer {
+            background-color: #1a1a1a;
+            color: #ddd;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
 
-      .btn {
-        font-size: 17px;
-        padding: 16px;
-      }
-    }
-  </style>
+        .affiliate-disclosure {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 0.85rem;
+            padding: 15px;
+            border: 1px solid #333;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 4px;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* 移动端简化导航 */
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <div class="badge">18+ Adults Only</div>
 
-      <h1>Private Adult Access</h1>
-
-      <p class="sub">
-        Continue below to view private profiles and enter the next step of the members area.
-      </p>
-
-      <div class="hero">
-        <div class="hero-label">Private • Discreet • Adults Only</div>
-      </div>
-
-      <div class="features">
-        <div class="feature">
-          <strong>Private</strong>
-          Members-only adult access
-        </div>
-        <div class="feature">
-          <strong>Discreet</strong>
-          Simple and private entry
-        </div>
-        <div class="feature">
-          <strong>Instant</strong>
-          Continue to the next step
-        </div>
-      </div>
-
-      <a class="btn" id="enterBtn" href=" ">
-
-      </a >
-
-      <div class="hint">
-        Tap the button above to continue.
-      </div>
-
-      <div class="note">
-        By continuing, you confirm that you are of legal age in your jurisdiction.
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const OFFER_URL = "https://t.crdtg2.com/402888/9953/37712?aff_sub5=SF_006OG000004lmDN";
-
-    const enterBtn = document.getElementById("enterBtn");
-    enterBtn.href = OFFER_URL;
-    enterBtn.textContent = "Continue ▶";
-  </script>
-</body>
-</html>
+    <header>
+        <div class="logo">SEA Glow & Style</div>
+        <nav class="nav-links
