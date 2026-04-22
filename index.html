@@ -12,129 +12,41 @@
             --bg-color: #fcfbf9;
             --text-color: #4a4a4a;
         }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Lato', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+        a { text-decoration: none; color: var(--accent-color); }
+        header { background-color: #fff; padding: 20px 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--primary-color); letter-spacing: 1px; }
+        .nav-links a { margin-left: 20px; color: var(--primary-color); font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent-color); }
+        .hero { position: relative; height: 60vh; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1596462502278-27bf85033e5a?auto=format&fit=crop&w=1920&q=80') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 0 20px; }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .hero-content p { font-size: 1.2rem; font-weight: 300; max-width: 600px; margin: 0 auto; }
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--primary-color); margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+        .card-img { height: 250px; background-color: #eee; background-size: cover; background-position: center; }
+        .card-content { padding: 25px; }
+        .category { font-size: 12px; text-transform: uppercase; color: var(--accent-color); font-weight: 700; margin-bottom: 10px; display: block; }
+        .card-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 10px; line-height: 1.4; }
+        .card-desc { font-size: 0.9rem; color: #777; margin-bottom: 20px; }
+        .read-more { display: inline-block; padding: 8px 0; font-weight: 700; font-size: 0.9rem; border-bottom: 2px solid var(--accent-color); color: var(--primary-color); }
+        footer { background-color: #1a1a1a; color: #ddd; text-align: center; padding: 40px 20px; margin-top: 60px; }
+        .affiliate-disclosure { max-width: 800px; margin: 0 auto 20px; font-size: 0.85rem; padding: 15px; border: 1px solid #333; background-color: rgba(255,255,255,0.05); border-radius: 4px; text-align: left; }
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a { color: #aaa; margin: 0 10px; font-size: 0.9rem; }
+        @media (max-width: 768px) { .hero-content h1 { font-size: 2rem; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--accent-color);
-        }
-
-        header {
-            background-color: #fff;
-            padding: 20px 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-color);
-            letter-spacing: 1px;
-        }
-
-        .nav-links a {
-            margin-left: 20px;
-            color: var(--primary-color);
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-
-        .hero {
-            position: relative;
-            height: 60vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1596462502278-27bf85033e5a?auto=format&fit=crop&w=1920&q=80') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            padding: 0 20px;
-        }
-
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 40px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-img {
-            height: 250px;
-            background-color: #eee;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .card-content {
-            padding: 25px;
-        }
-
-        .category {
-            font-size: 12px;
-            text-transform: uppercase;
-            color: var(--accent-color);
-            font-weight: 700;
+    <header>
+        <div class="logo">SEA Glow & Style</div>
+        <nav class="nav-links">
+            <a href="#">Skincare</a>
+            <a href="#">Fashion Trends</a>
+            <a href="#">Best Buys</a>
+            <a href="#">About Us</a>
+        </nav>
